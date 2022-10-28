@@ -3,8 +3,8 @@ import Client from "../components/Client";
 import { getClients } from "../api/clients";
 
 export function loader() {
-   const clients = getClients()
-   return clients
+    getClients()
+   return {}
 }
 const Index = () => {
 
