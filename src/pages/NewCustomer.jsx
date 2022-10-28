@@ -1,7 +1,8 @@
 import React from 'react'
-import {useNavigate, Form, useActionData} from 'react-router-dom'
+import {useNavigate, Form, useActionData, redirect} from 'react-router-dom'
 import FormClient from '../components/FormClient'
 import Error from '../components/Error';
+import { addClient } from '../api/clients';
 
 export async function action({request}){
     const formData = await request.formData();
@@ -26,6 +27,9 @@ export async function action({request}){
     if(Object.keys(errors).length){
         return errors
     }
+
+    await addClient(data)
+    return redirect('/') // use redirect when we use action & loader
 }
 
 
@@ -42,7 +46,8 @@ function NewCustomer() {
                 <p className="mt-3"> fill all the fields to add a new customer</p> 
             </div>
             <div className="flex justify-end">
-                <button className='bg-blue-800 text-white px-7 py-2 font-bold uppercase my-3' onClick={()=>navigate(-1)}>
+                <button className='bg-blue-800 text-white px-7 py-2 font-bold uppercase my-3' onClick={()=>navigate(-1)}> 
+                    {/* Navigate is good whrn using a button */}
                     Return
                 </button>
             </div>

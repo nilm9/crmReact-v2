@@ -1,39 +1,63 @@
-{ 
-    "customers" : [
+{
+  "customers": [
     {
-        "id": 1,
-        "nombre": "Juan",
-        "telefono": 102013313,
-        "email": "juan@juan.com",
-        "empresa":"Codigo Con Juan"
+      "id": 1,
+      "nombre": "Juan",
+      "telefono": 102013313,
+      "email": "juan@juan.com",
+      "empresa": "Codigo Con Juan"
     },
     {
-        "id": 2,
-        "nombre": "Karen",
-        "telefono": 138198313,
-        "email": "karen@juan.com",
-        "empresa": "Codigo Con Juan"
+      "id": 2,
+      "nombre": "Karen",
+      "telefono": 138198313,
+      "email": "karen@juan.com",
+      "empresa": "Codigo Con Juan"
     },
     {
-        "id": 3,
-        "nombre": "Josue",
-        "telefono": 31983913,
-        "email": "josue@juan.com",
-        "empresa": "Codigo Con Juan"
+      "id": 3,
+      "nombre": "Josue",
+      "telefono": 31983913,
+      "email": "josue@juan.com",
+      "empresa": "Codigo Con Juan"
     },
     {
-        "id": 4,
-        "nombre": "Miguel",
-        "telefono": 319381983,
-        "email": "miguel@juan.com",
-        "empresa": "Codigo Con Juan"
+      "id": 4,
+      "nombre": "Miguel",
+      "telefono": 319381983,
+      "email": "miguel@juan.com",
+      "empresa": "Codigo Con Juan"
     },
     {
-        "id": 5,
-        "nombre": "Pedro",
-        "telefono": 1398198938,
-        "email": "pedro@juan.com",
-        "empresa": "Codigo Con Juan"
+      "id": 5,
+      "nombre": "Pedro",
+      "telefono": 1398198938,
+      "email": "pedro@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "nombre": "Nil Monfort",
+      "empresa": "hola25",
+      "email": "nilmonfort63@gmail.com",
+      "telefono": "6356651545",
+      "notas": "hola",
+      "id": 6
+    },
+    {
+      "nombre": "Nil Monfort",
+      "empresa": "hola25",
+      "email": "nilmonfort98@gmail.com",
+      "telefono": "635620257",
+      "notas": "ddddd",
+      "id": 7
+    },
+    {
+      "nombre": "Tom Keen",
+      "empresa": "hola25",
+      "email": "ricosuaveyatusabe95@gmail.com",
+      "telefono": "51151515",
+      "notas": "knjkkjnk ",
+      "id": 8
     }
   ]
 }
