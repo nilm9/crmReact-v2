@@ -8,6 +8,15 @@ export async function getClients(){
     return result;
 }
 
+
+export async function getClient(id){
+
+    const resp = await fetch(`${import.meta.env.VITE_API_URL}/${id}`)
+    const result = await resp.json()
+
+    return result;
+}
+
 export async function addClient(data){
     try {
         const resp = await fetch(url ,{
@@ -23,4 +32,11 @@ export async function addClient(data){
     } catch (error) {
         console.log(error);
     }
+}
+
+export async function updateClient(id, data){
+
+
+
+    
 }
