@@ -13,7 +13,7 @@ export async function loader({params}){
       statusText: 'No results were found',
     })
   }
-  console.log(client);
+  return client
 }
 
 export async function getClientsEdit(){
@@ -24,7 +24,7 @@ export async function getClientsEdit(){
 }
 
 
-export async function action({request}){
+export async function action({request, params}){
   const formData = await request.formData();
   //debug formdata
   //console.log([...formData]);
@@ -61,7 +61,7 @@ function EditClient() {
   const navigate = useNavigate();
   const client = useLoaderData();
   const errors = useActionData();
-  console.log(client);
+  console.log(`${client} from edit`);
 
   return (
       <>
@@ -81,9 +81,9 @@ function EditClient() {
 
         <div className="bg-white shadow rounded-md md:w-3/4 mx-auto px-5 py-10 mt-20">
             {errors?.length && errors.map((error, i) => <Error key={i}>{error}</Error>)}
-            <Form method='post'>
+            <Form method='post' noValidate>
                 <FormClient client={client}/>
-                <input type="submit" className='mt-5 w-full bg-blue-800 p-3 uppercase font-bold text-white text-lg' value="Register Client"/>
+                <input type="submit" className='mt-5 w-full bg-blue-800 p-3 uppercase font-bold text-white text-lg' value="Edit Client"/>
             </Form>
 
         </div>
