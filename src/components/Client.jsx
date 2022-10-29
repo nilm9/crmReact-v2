@@ -1,5 +1,12 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Form, redirect } from 'react-router-dom';
+import { deleteClient } from '../api/clients';
+
+export async function action({params}){
+    deleteClient(params.client)
+    console.log('entra');
+    return redirect('/');
+}
 
 const Client = ({client}) => {
     const navigate = useNavigate();
@@ -17,9 +24,12 @@ const Client = ({client}) => {
             <p className='text-gray-600'> <span className='text-gray-800 uppercase font-bold'> Notes: </span> {notas}</p>
         </td>
         <td className="p-6 flex flex-col gap-3">
-            <button type='button' className='text-red-600 hover:text-red-700 uppercase font-bold text-xs'>
-                delete
-            </button>
+            <Form method="submit" action={`/customers/${id}/delete`}>
+                <button type='button' className='text-red-600 hover:text-red-700 uppercase font-bold text-xs' >
+                delete  
+                </button>
+            </Form>
+
             <button type='button' className='text-blue-600 hover:text-blue-700 uppercase font-bold text-xs' onClick={() => navigate(`/customers/${id}/edit`)}>
                 edit
             </button>

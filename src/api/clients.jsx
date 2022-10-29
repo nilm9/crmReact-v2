@@ -27,8 +27,8 @@ export async function addClient(data){
         }
 
         })
-        await resp.json(); //returns weather is true or fase
-        console.log(resp.json());
+        const result = await resp.json(); //returns weather is true or fase
+        return result;
     } catch (error) {
         console.log(error);
     }
@@ -44,12 +44,18 @@ export async function updateClient(id, data){
         }
 
         })
-        await resp.json(); //returns weather is true or fase
-        console.log(resp.json());
+        const result = await resp.json(); //returns weather is true or fase
+        return result;
     } catch (error) {
         console.log(error);
     }
 
 
+
+}
+
+export async function deleteClient( id ){
+console.log(`deleting...`);
+console.log(id);
 
 }
