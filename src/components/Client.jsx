@@ -23,9 +23,13 @@ const Client = ({client}) => {
             <p className='text-gray-600'> <span className='text-gray-800 uppercase font-bold'> Number: </span> {telefono}</p>
             <p className='text-gray-600'> <span className='text-gray-800 uppercase font-bold'> Notes: </span> {notas}</p>
         </td>
-        <td className="p-6 flex flex-col gap-3">
-            <Form method="submit" action={`/customers/${id}/delete`}>
-                <button type='button' className='text-red-600 hover:text-red-700 uppercase font-bold text-xs' >
+        <td className="p-6 flex flex-col place-items-center gap-3">
+            <Form method="post" action={`/customers/${id}/delete`} onSubmit={(e)=>{
+                if(!confirm('Do you want to delete this register?')){
+                    e.preventDefault()
+                }
+            }}>
+                <button type='submit' className='text-red-600 hover:text-red-700 uppercase font-bold text-xs' >
                 delete  
                 </button>
             </Form>

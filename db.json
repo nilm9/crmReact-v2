@@ -1,7 +1,7 @@
 {
   "customers": [
     {
-      "nombre": "Juan",
+      "nombre": "Juan jr",
       "empresa": "Codigo Con Juan",
       "email": "juan@juan.com",
       "telefono": "102013313",
@@ -59,6 +59,14 @@
       "telefono": "51151515",
       "notas": "knjkkjnk ",
       "id": 8
+    },
+    {
+      "nombre": "Nil Monfort",
+      "empresa": "hola25",
+      "email": "nilmonfort98@gmail.com",
+      "telefono": "635620257",
+      "notas": "fffffffffffffffffff",
+      "id": 9
     }
   ]
 }

@@ -49,11 +49,9 @@ export async function updateClient(id, data){
     } catch (error) {
         console.log(error);
     }
-
-
-
 }
 
+ 
 export async function deleteClient( id ){
 console.log(`deleting...`);
 console.log(id);
